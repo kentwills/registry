@@ -17,6 +17,7 @@ app.configure(function () {
     app.use(cors);
     app.use(express.logger());
     app.use(express.compress());
+    app.use(express.bodyParser());
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(app.router);
