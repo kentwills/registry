@@ -17,7 +17,9 @@ app.configure(function () {
     app.use(cors);
     app.use(express.logger());
     app.use(express.compress());
-    app.use(express.bodyParser());
+    app.use(express.json());
+    app.use(express.urlencoded());
+    app.use(express.multipart());
     app.use(app.router);
     app.use(express.errorHandler({
         dumpExceptions: true,
